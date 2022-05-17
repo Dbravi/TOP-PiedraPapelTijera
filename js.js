@@ -13,58 +13,57 @@ let scoreComputer = 0;
 
 const scoreFinal = function () {
     if (scorePlayer > scoreComputer) {
-        document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: HUMANO gana la partida"
+         document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: HUMANO gana la partida"
     } else if (scorePlayer < scoreComputer) {
-        document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: COMPUTADORA gana la partida"
+         document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: COMPUTADORA gana la partida"
     } else {
-        document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: EMPATE!"
+         document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: EMPATE!"
     }
 }
 
 const playRound = function (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase()
-    let i=1;
-    do {
         // playerSelection = prompt("piedra, papel o tijera?");
         computerSelection = computerPlays()
-        document.getElementById("selecciones").innerHTML = `<br> Round ${i}: Humano elige ${playerSelection} y Computadora elige ${computerSelection}`;
-        if (playerSelection === computerSelection) {
-            console.log("Empate, punto para cada uno!")
+        document.getElementById("selecciones").innerHTML = `<br> Humano elige <u>${playerSelection}</u> y Computadora elige <u>${computerSelection}</u>`;
+        if (scorePlayer >= 5 || scoreComputer >= 5){
+            scoreFinal() }
+
+        else if (playerSelection === computerSelection) {
+            document.getElementById("combate").innerHTML=("Empate, punto para cada uno!")
             scorePlayer++
             scoreComputer++
         }
         else if (playerSelection === papel && computerSelection === "piedra") {
             scorePlayer++
-            console.log("Humano gana round, papel le gana a piedra!")
+            document.getElementById("combate").innerHTML=("Humano gana round, papel le gana a piedra!")
         }
         else if (playerSelection === papel && computerSelection === "tijera") {
             scoreComputer++
-            console.log("Computadora gana round, tijera le gana a papel!")
+            document.getElementById("combate").innerHTML=("Computadora gana round, tijera le gana a papel!")
         }
         else if (playerSelection === piedra && computerSelection === "tijera") {
             scorePlayer++
-            console.log("Humano gana round, piedra le gana a tijera!")
+            document.getElementById("combate").innerHTML=("Humano gana round, piedra le gana a tijera!")
         }
         else if (playerSelection === piedra && computerSelection === "papel") {
             scoreComputer++
-            console.log("Computadora gana round, papel le gana a piedra!")
+            document.getElementById("combate").innerHTML=("Computadora gana round, papel le gana a piedra!")
         }
         else if (playerSelection === tijera && computerSelection === "papel") {
             scorePlayer++
-            console.log("Humano gana round, tijera le gana a papel!")
+            document.getElementById("combate").innerHTML=("Humano gana round, tijera le gana a papel!")
         }
         else if (playerSelection === tijera && computerSelection === "piedra") {
             scoreComputer++
-            console.log("Computadora gana round, piedra le piedgana a tijera!")
+            document.getElementById("combate").innerHTML=("Computadora gana round, piedra le piedgana a tijera!")
         }
-        document.getElementById("scorePlayer").innerHTML =`<br>Humano Score parcial: ${scorePlayer}`
-        document.getElementById("scoreComputer").innerHTML =`<br>Computadora Score parcial: ${scoreComputer}`
-        i++
-    }
-    while(i<6);
-}
 
+        document.getElementById("scorePlayer").innerHTML =`<br><u>Humano</u> Score parcial: <b>${scorePlayer}</b>`
+        document.getElementById("scoreComputer").innerHTML =`<br><u>Computadora</u> Score parcial: <b>${scoreComputer}</b>`
+    }
+    
 const playerSelection="piedra";
 const computerSelection = computerPlays();
-playRound(playerSelection, computerSelection);
-scoreFinal()
+// playRound(playerSelection, computerSelection);
+// scoreFinal()

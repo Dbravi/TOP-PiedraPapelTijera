@@ -34,6 +34,10 @@ button {
     border-radius: 20%;
 }
 
+button:hover {
+    border: 5px solid white;
+}
+
 @media screen and (min-width: 400px) {
     button {
         padding: 30px;
@@ -54,6 +58,7 @@ button {
     border-radius: 10px;
     margin: 20px;
     text-align: center;
+    border: 5px solid white;
 }
 
 #startOver {
@@ -71,5 +76,6 @@ background-color: yellow;
 
 #b3{
 background-color: brown;
+color: white;
 
 }

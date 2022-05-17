@@ -48,17 +48,17 @@ button:hover {
 }
 
 #rfinal {
-    background-color: white;
-    color: rgb(0, 0, 0);
+    color: white;
     border-radius: 10px;
-    margin: 15px;
+    margin: 15px;;
     text-align: center;
 
 }
 #combate {
-    background-color: white;
-    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-radius: 10px;
+    padding: 15px;
     margin: 20px;
     text-align: center;
     border: 5px solid white;

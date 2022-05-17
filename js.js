@@ -36,7 +36,7 @@ const scoreFinal = function () {
 const playRound = function (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase()
         computerSelection = computerPlays()
-        document.getElementById("selecciones").innerHTML = `<br> Elegiste <u>${playerSelection}</u> y Computadora <u>${computerSelection}</u>`;
+        document.getElementById("selecciones").innerHTML = `<br> Elegiste <u>${playerSelection}</u> y la computadora <u>${computerSelection}</u>`;
         
         if (playerSelection === computerSelection) {
             document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; color:white; background-color: gray ; padding: 15px; border: 3px solid white; text-align:center">Empate, Nadie suma! xD`)

@@ -13,13 +13,13 @@ let scoreComputer = 0;
 
 const scoreFinal = function () {
     if (scorePlayer >= 5 || scoreComputer >= 5 && scorePlayer > scoreComputer){
-         document.getElementById("rfinal").innerHTML = (`<h2 style="border-radius:10px; background-color:green; color: white; padding: 15px;">RESULTADO FINAL: GANASTE!! :D`)
+         document.getElementById("rfinal").innerHTML = (`<h2 style="border-radius:10px; background-color:green; color: white; padding: 15px;border: 3px solid white">RESULTADO FINAL: GANASTE!! :D`)
          document.getElementById("startOver").style.display = 'block';
          document.getElementById("b1").style.display = 'none';
          document.getElementById("b2").style.display = 'none';
          document.getElementById("b3").style.display = 'none';
     } else if (scorePlayer >= 5 || scoreComputer >=5 && scorePlayer < scoreComputer) {
-         document.getElementById("rfinal").innerHTML = (`<h2 style="border-radius:10px; background-color:red; color: white; padding: 15px">RESULTADO FINAL: COMPUTADORA gana la partida :()`)
+         document.getElementById("rfinal").innerHTML = (`<h2 style="border-radius:10px; background-color:red; color: white; padding: 15px;border: 3px solid white">RESULTADO FINAL: COMPUTADORA gana la partida :()`)
          document.getElementById("startOver").style.display = 'block';
          document.getElementById("b1").style.display = 'none';
          document.getElementById("b2").style.display = 'none';

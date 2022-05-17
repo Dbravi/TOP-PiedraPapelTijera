@@ -68,6 +68,9 @@ button:hover {
     color: white;
 }
 
+#selecciones {
+    text-align: center;
+}
 #b1{
 background-color: gray;
 color: white;

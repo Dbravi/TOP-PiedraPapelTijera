@@ -31,8 +31,6 @@ const scoreFinal = function () {
          document.getElementById("b2").style.display = 'none';
          document.getElementById("b3").style.display = 'none';
     }
-    
- 
 }
 
 const playRound = function (playerSelection, computerSelection) {
@@ -68,7 +66,7 @@ const playRound = function (playerSelection, computerSelection) {
             document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:red; color: white; padding: 15px; border: 3px solid white;text-align:center">Computadora gana round, piedra le gana a tijera! :(</h2>`)
         }
         
-        document.getElementById("scorePlayer").innerHTML =`<br><u>Humano</u> : <b>${scorePlayer}</b>`
+        document.getElementById("scorePlayer").innerHTML =`<br><u>Tu puntaje</u> : <b>${scorePlayer}</b>`
         document.getElementById("scoreComputer").innerHTML =`<br><u>Computadora</u> : <b>${scoreComputer}</b>`
         scoreFinal()
     }

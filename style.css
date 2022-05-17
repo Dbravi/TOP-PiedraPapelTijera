@@ -65,7 +65,14 @@ button:hover {
 
 #startOver {
     display: none;
-    color: white;
+    color: black;
+    font-weight: 900;
+    font-size: 1.2em;
+    background-color: white;
+}
+
+#startOver:hover{
+    border: 5px solid green;
 }
 
 #selecciones {

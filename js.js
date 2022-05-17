@@ -12,24 +12,22 @@ let scorePlayer = 0;
 let scoreComputer = 0;
 
 const scoreFinal = function () {
-    if (scorePlayer > scoreComputer) {
+    if (scorePlayer >= 5 || scoreComputer >= 5 && scorePlayer > scoreComputer){
          document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: HUMANO gana la partida"
-    } else if (scorePlayer < scoreComputer) {
+    } else if (scorePlayer >= 5 || scoreComputer >=5 && scorePlayer < scoreComputer) {
          document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: COMPUTADORA gana la partida"
     } else {
          document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: EMPATE!"
     }
+ 
 }
 
 const playRound = function (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase()
-        // playerSelection = prompt("piedra, papel o tijera?");
         computerSelection = computerPlays()
         document.getElementById("selecciones").innerHTML = `<br> Humano elige <u>${playerSelection}</u> y Computadora elige <u>${computerSelection}</u>`;
-        if (scorePlayer >= 5 || scoreComputer >= 5){
-            scoreFinal() }
-
-        else if (playerSelection === computerSelection) {
+        
+        if (playerSelection === computerSelection) {
             document.getElementById("combate").innerHTML=("Empate, punto para cada uno!")
             scorePlayer++
             scoreComputer++
@@ -58,9 +56,10 @@ const playRound = function (playerSelection, computerSelection) {
             scoreComputer++
             document.getElementById("combate").innerHTML=("Computadora gana round, piedra le piedgana a tijera!")
         }
-
+        
         document.getElementById("scorePlayer").innerHTML =`<br><u>Humano</u> Score parcial: <b>${scorePlayer}</b>`
         document.getElementById("scoreComputer").innerHTML =`<br><u>Computadora</u> Score parcial: <b>${scoreComputer}</b>`
+        scoreFinal()
     }
     
 const playerSelection="piedra";

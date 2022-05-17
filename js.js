@@ -23,11 +23,11 @@ const scoreFinal = function () {
 
 const playRound = function (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase()
-    let i=1
+    let i=1;
     do {
         // playerSelection = prompt("piedra, papel o tijera?");
         computerSelection = computerPlays()
-        console.log (`Round ${i}: Humano elige ${playerSelection} y Computadora elige ${computerSelection}`)
+        document.getElementById("selecciones").innerHTML = `<br> Round ${i}: Humano elige ${playerSelection} y Computadora elige ${computerSelection}`;
         if (playerSelection === computerSelection) {
             console.log("Empate, punto para cada uno!")
             scorePlayer++
@@ -57,8 +57,8 @@ const playRound = function (playerSelection, computerSelection) {
             scoreComputer++
             console.log("Computadora gana round, piedra le piedgana a tijera!")
         }
-        console.log(`Humano Score parcial: ${scorePlayer}`)
-        console.log(`Computadora Score parcial: ${scoreComputer}`)
+        document.getElementById("scorePlayer").innerHTML =`<br>Humano Score parcial: ${scorePlayer}`
+        document.getElementById("scoreComputer").innerHTML =`<br>Computadora Score parcial: ${scoreComputer}`
         i++
     }
     while(i<6);

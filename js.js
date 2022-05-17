@@ -14,11 +14,24 @@ let scoreComputer = 0;
 const scoreFinal = function () {
     if (scorePlayer >= 5 || scoreComputer >= 5 && scorePlayer > scoreComputer){
          document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: HUMANO gana la partida"
+         document.getElementById("startOver").style.display = 'block';
+         document.getElementById("b1").style.display = 'none';
+         document.getElementById("b2").style.display = 'none';
+         document.getElementById("b3").style.display = 'none';
     } else if (scorePlayer >= 5 || scoreComputer >=5 && scorePlayer < scoreComputer) {
          document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: COMPUTADORA gana la partida"
-    } else {
+         document.getElementById("startOver").style.display = 'block';
+         document.getElementById("b1").style.display = 'none';
+         document.getElementById("b2").style.display = 'none';
+         document.getElementById("b3").style.display = 'none';
+    } else if (scorePlayer >= 5 || scoreComputer >=5 && scorePlayer == scoreComputer){
          document.getElementById("rfinal").innerHTML = "RESULTADO FINAL: EMPATE!"
+         document.getElementById("startOver").style.display = 'block';
+         document.getElementById("b1").style.display = 'none';
+         document.getElementById("b2").style.display = 'none';
+         document.getElementById("b3").style.display = 'none';
     }
+    
  
 }
 
@@ -57,8 +70,8 @@ const playRound = function (playerSelection, computerSelection) {
             document.getElementById("combate").innerHTML=("Computadora gana round, piedra le piedgana a tijera!")
         }
         
-        document.getElementById("scorePlayer").innerHTML =`<br><u>Humano</u> Score parcial: <b>${scorePlayer}</b>`
-        document.getElementById("scoreComputer").innerHTML =`<br><u>Computadora</u> Score parcial: <b>${scoreComputer}</b>`
+        document.getElementById("scorePlayer").innerHTML =`<br><u>Humano</u> : <b>${scorePlayer}</b>`
+        document.getElementById("scoreComputer").innerHTML =`<br><u>Computadora</u> : <b>${scoreComputer}</b>`
         scoreFinal()
     }
     

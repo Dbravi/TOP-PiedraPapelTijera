@@ -18,9 +18,10 @@
         <h2 id="scoreComputer"></h2>
         <h1 id="rfinal"></h1>
         <div class="buttons">
-            <button onclick="playRound(piedra, computerSelection)">Piedra</button>
-            <button onclick="playRound(papel, computerSelection)">Papel</button>
-            <button onclick="playRound(tijera, computerSelection)">Tijera</button>
+            <button id="startOver" onclick="window.location.reload()">Empezar de nuevo</button>
+            <button id="b1" onclick="playRound(piedra, computerSelection)">Piedra</button>
+            <button id="b2" onclick="playRound(papel, computerSelection)">Papel</button>
+            <button id="b3" onclick="playRound(tijera, computerSelection)">Tijera</button>
         </div>
      </main>
         <script src="js.js"></script>

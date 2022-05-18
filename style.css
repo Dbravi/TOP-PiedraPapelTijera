@@ -7,11 +7,13 @@
     font-size: 20px;
     font-family: montserrat;
     background-color: rgb(255, 255, 255);
+    
 
 }
 
 body {
     width: 100%;
+    
 }
 
 main {
@@ -107,6 +109,14 @@ button:hover {
     -webkit-animation: rotate-center 1s ease-in-out infinite both;
     animation: none;
 
+}
+
+#scorePlayer {
+    font-size: 1.2em;
+}
+
+#scoreComputer {
+    font-size: 1.2em;
 }
 
 @-webkit-keyframes rotate-center {

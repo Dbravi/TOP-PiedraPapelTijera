@@ -47,23 +47,7 @@ button:hover {
     border: 5px solid white;
 }
 
-@media screen and (max-width: 400px) {
-    #b1 {
-        width: 10px;
-        height: auto;
-        animation: rotate-center 7s ease-in-out infinite both;
-    }
-    #b2 {
-        width: 10px;
-        height: auto;
-        animation: rotate-center 7s ease-in-out infinite both;
-    }
-    #b3 {
-        width: 10px;
-        height: auto;
-        animation: rotate-center 7s ease-in-out infinite both;
-    }
-}
+
 
 #rfinal {
     color: white;
@@ -105,11 +89,13 @@ button:hover {
 .buttons {
     display: flex;
     flex-wrap: nowrap;
-    gap:10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 #b1 {
-    width: 100px;
+    width: 80px;
     height: auto;
     animation: rotate-center 7s ease-in-out infinite both;
 }
@@ -119,7 +105,7 @@ button:hover {
 }
 
 #b2 {
-    width: 100px;
+    width: 80px;
     animation: rotate-center 7s ease-in-out infinite both;
 }
 
@@ -128,7 +114,7 @@ button:hover {
 }
 
 #b3 {
-    width: 60px;
+    width: 50px;
     height: auto;
     animation: rotate-center 5s ease-in-out infinite both;
 }

@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-size: 22px;
     font-family: montserrat;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     
 }
 body {
@@ -18,21 +18,14 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 5%;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     height: 100vh;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-button {
-    padding: 50px;
-    border-radius: 20%;
+img {
     margin: 15px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -41,8 +34,6 @@ button:hover {
 
 @media screen and (max-width: 500px) {
     button {
-        padding: 15px;
-        border-radius: 20%;
         margin: 5px;
     }
 }
@@ -55,8 +46,8 @@ button:hover {
 
 }
 #combate {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 15px;
     margin: 20px;
@@ -65,14 +56,18 @@ button:hover {
 
 #startOver {
     display: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 900;
     font-size: 1.2em;
-    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
 }
 
 #startOver:hover{
-    border: 5px solid green;
+    background-color: white;
+    color: black;
+    border: 3px solid rgb(0, 0, 0);
 }
 
 #selecciones {
@@ -81,14 +76,18 @@ button:hover {
 #b1{
 background-color: gray;
 color: white;
+width: 120px;
+height: auto;
 }
 
 #b2{
 background-color: yellow;
+width: 120px;
 }
 
 #b3{
 background-color: brown;
 color: white;
-
+width: 60px;
+height: auto;
 }

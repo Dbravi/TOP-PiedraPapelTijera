@@ -13,7 +13,7 @@ let scoreComputer = 0;
 
 const scoreFinal = function () {
     if (scorePlayer >= 5 || scoreComputer >= 5 && scorePlayer > scoreComputer){
-         document.getElementById("rfinal").innerHTML = (`<h2 style="border-radius:10px; background-color:white; color: black; padding: 15px;border: 3px solid black">RESULTADO FINAL: Ganaste!! :D`)
+         document.getElementById("rfinal").innerHTML = (`<h2 style="border-radius:10px; animation: shake-horizontal 2s linear infinite both; background-color:white; color: black; padding: 15px;border: 3px solid black">RESULTADO FINAL: Ganaste!! :D`)
          document.getElementById("startOver").style.display = 'block';
          document.getElementById("b1").style.display = 'none';
          document.getElementById("b2").style.display = 'none';

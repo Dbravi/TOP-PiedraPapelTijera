@@ -36,38 +36,38 @@ const scoreFinal = function () {
 const playRound = function (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase()
         computerSelection = computerPlays()
-        document.getElementById("selecciones").innerHTML = `<br> Elegiste <u>${playerSelection}</u> y la computadora <u>${computerSelection}</u>`;
+        document.getElementById("selecciones").innerHTML = `<br> Elegiste <u>${playerSelection}</u> y la computadora <u>${computerSelection}</u>.`;
         
         if (playerSelection === computerSelection) {
-            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; color:white; background-color: gray ; padding: 15px; border: 3px solid black; text-align:center">Empate, Nadie suma! :/`)
+            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; color:white; background-color: gray ; padding: 10px; border: 3px solid black; text-align:center">Empate, Nadie suma! &#128556;`)
         }
         else if (playerSelection === papel && computerSelection === "piedra") {
             scorePlayer++
-            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; animation: shake-horizontal 3s linear infinite both; background-color:white; color: black; padding: 15px; border: 3px solid black; text-align:center">Ganaste el round, papel le gana a piedra! ;D</h2>`)
+            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; animation: shake-horizontal 3s linear infinite both; background-color:white; color: black; padding: 10px; border: 3px solid black; text-align:center">Ganaste el round, papel le gana a piedra! &#128512;</h2>`)
         }
         else if (playerSelection === papel && computerSelection === "tijera") {
             scoreComputer++
-            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:black; color: white; padding: 15px; border: 3px solid white;text-align:center">Computadora gana el round, tijera le gana a papel! :(</h2>`)
+            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:black; color: white; padding: 10px; border: 3px solid white;text-align:center">Computadora gana el round, tijera le gana a papel! &#128546;</h2>`)
         }
         else if (playerSelection === piedra && computerSelection === "tijera") {
             scorePlayer++
-            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; animation: shake-horizontal 3s linear infinite both; background-color:white; color: black; padding: 15px; border: 3px solid black;text-align:center">Ganaste el round, piedra le gana a tijera! ;D</h2>`)
+            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; animation: shake-horizontal 3s linear infinite both; background-color:white; color: black; padding: 10px; border: 3px solid black;text-align:center">Ganaste el round, piedra le gana a tijera! &#128512;</h2>`)
         }
         else if (playerSelection === piedra && computerSelection === "papel") {
             scoreComputer++
-            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:black; color: white; padding: 15px; border: 3px solid white;text-align:center">Computadora gana el round, papel le gana a piedra! :(</h2>`)
+            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:black; color: white; padding: 10px; border: 3px solid white;text-align:center">Computadora gana el round, papel le gana a piedra! &#128546;</h2>`)
         }
         else if (playerSelection === tijera && computerSelection === "papel") {
             scorePlayer++
-            document.getElementById("combate").innerHTML=(`<h2 style="animation: shake-horizontal 3s linear infinite both; border-radius:10px; background-color:white; color: black; padding: 15px; border: 3px solid black;text-align:center">Ganaste el round, tijera le gana a papel! ;D</h2>`)
+            document.getElementById("combate").innerHTML=(`<h2 style="animation: shake-horizontal 3s linear infinite both; border-radius:10px; background-color:white; color: black; padding: 15px; border: 3px solid black;text-align:center">Ganaste el round, tijera le gana a papel! &#128512;</h2>`)
         }
         else if (playerSelection === tijera && computerSelection === "piedra") {
             scoreComputer++
-            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:black; color: white; padding: 15px; border: 3px solid white;text-align:center">Computadora gana el round, piedra le gana a tijera! :(</h2>`)
+            document.getElementById("combate").innerHTML=(`<h2 style="border-radius:10px; background-color:black; color: white; padding: 10px; border: 3px solid white;text-align:center">Computadora gana el round, piedra le gana a tijera! &#128546;</h2>`)
         }
         
-        document.getElementById("scorePlayer").innerHTML =`<br><u>Tu puntaje</u> : <b>${scorePlayer}</b>`
-        document.getElementById("scoreComputer").innerHTML =`<br><u>Computadora</u> : <b>${scoreComputer}</b>`
+        document.getElementById("scorePlayer").innerHTML =`<br>&#128572; Tu puntaje : <b>${scorePlayer}</b>`
+        document.getElementById("scoreComputer").innerHTML =`<br>&#128187; Computadora : <b>${scoreComputer}</b>`
         scoreFinal()
     }
     
